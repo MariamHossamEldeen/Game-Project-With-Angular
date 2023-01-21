@@ -1,0 +1,60 @@
+<div class="loginComp">
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./assets/logo.png" alt="">
+        Game Over
+      </a>
+        <form class="d-flex">
+          <button type="button" class="btn btn-primary login" routerLink="/login">Login</button>
+          <button  type="submit" class="btn btn-primary join">Join Free</button>
+        </form>
+
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 image">
+
+      </div>
+      <div class="col-md-6 formDiv">
+        <h2 class="pb-5 pt-5 text-center ">Login To GameOver</h2>
+        <div class="d-flex justify-content-center">
+        <img class="loginImg" src="./assets/logo.png" alt="">
+        </div>
+        <form action="" class="form-group" (ngSubmit)="submitForm(registerForm)" [formGroup]="registerForm">
+
+          <div class="">
+            <input type="email" placeholder="Email Address" class="w-100 form-control " formControlName="email">
+            <div *ngIf="registerForm.get('email') && registerForm.get('email')?.touched">
+              <p class="errorReq" *ngIf="registerForm.get('email')?.getError('required')">Email Is Required</p>
+              <p *ngIf="ErrorMsg">{{ErrorMsg}}</p>
+            </div>
+          </div>
+          <div class="mt-3">
+            <input type="password" placeholder="Password" class="w-100 form-control " formControlName="password">
+            <div *ngIf="registerForm.get('password') && registerForm.get('password')?.touched">
+              <p class="errorReq" *ngIf="registerForm.get('password')?.getError('required')">Password Is Required</p>
+            </div>
+          </div>
+          <div class="mt-3">
+            <button class="form-control" type="submit" >Login</button>
+          </div>
+          <hr>
+          <div class="mt-5">
+            <p>Already a member? <a class="angleRight"  >Log In </a></p>
+          </div>
+          <div class="mt-5">
+            <a>Forget Password</a>
+            <a>Not Amember Yet <span>Create Account <i class="fa-solid fa-angle-right"></i></span></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

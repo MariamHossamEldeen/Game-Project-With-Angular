@@ -1,0 +1,73 @@
+<div class="loginComp">
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./assets/logo.png" alt="">
+        Game Over
+      </a>
+        <form class="d-flex">
+          <button type="button" class="btn btn-primary login" routerLink="/login">Login</button>
+          <button  type="submit" class="btn btn-primary join">Join Free</button>
+        </form>
+
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 image">
+
+      </div>
+      <div class="col-md-6 formDiv">
+        <h2 class="pb-5 pt-5 text-center ">Create My Account</h2>
+        <form action="" class="form-group" (ngSubmit)="submitForm(registerForm)" [formGroup]="registerForm">
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <input type="text" placeholder="First Name" class="w-100 form-control" formControlName="first_name">
+              <div *ngIf="registerForm.get('first_name') && registerForm.get('first_name')?.touched">
+                <p class="errorReq" *ngIf="registerForm.get('first_name')?.getError('required')">First Name Is Required</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" placeholder="Last Name" class="w-100 form-control " formControlName="last_name">
+              <div *ngIf="registerForm.get('last_name') && registerForm.get('last_name')?.touched">
+                <p class="errorReq" *ngIf="registerForm.get('last_name')?.getError('required')">Last Name Is Required</p>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <input type="email" placeholder="Email Address" class="w-100 form-control " formControlName="email">
+            <div *ngIf="registerForm.get('email') && registerForm.get('email')?.touched">
+              <p class="errorReq" *ngIf="registerForm.get('email')?.getError('required')">Email Is Required</p>
+              <p *ngIf="ErrorMsg">{{ErrorMsg}}</p>
+            </div>
+          </div>
+          <div class="mt-3">
+            <input type="number" placeholder="Age" class="w-100  form-control" formControlName="age">
+            <div *ngIf="registerForm.get('age') && registerForm.get('age')?.touched">
+              <p class="errorReq" *ngIf="registerForm.get('age')?.getError('required')">Age Is Required</p>
+            </div>
+          </div>
+          <div class="mt-3">
+            <input type="password" placeholder="Password" class="w-100 form-control " formControlName="password">
+            <div *ngIf="registerForm.get('password') && registerForm.get('password')?.touched">
+              <p class="errorReq" *ngIf="registerForm.get('password')?.getError('required')">Password Is Required</p>
+            </div>
+          </div>
+          <div class="mt-3">
+            <button class="form-control" type="submit" >Create Account </button>
+          </div>
+          <div class="mt-5 ">
+            <p> This site is protected by reCAPTCHA and the Google <a><u>Privacy Policy</u></a> Privacy Policy and<a><u>Terms of Service</u></a>  apply.</p>
+          </div>
+          <div class="mt-5">
+            <p>Already a member? <a class="angleRight" routerLink="/login" >Log In <i class="fa-solid fa-angle-right"></i></a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

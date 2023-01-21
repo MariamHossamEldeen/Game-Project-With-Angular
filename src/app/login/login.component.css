@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Xanh+Mono:ital@0;1&display=swap');
+.loginComp {
+  background-color: #272b30 !important;
+}
+nav{
+  background-color: #272b30;
+  border-bottom:  1px solid #1c1c1c99;
+}
+nav img{
+  width: 70px;
+  margin-right: -5px;
+  font-family: 'Xanh Mono', monospace;
+  font-style: italic;
+}
+nav a{
+  color: #fff;
+  font-size: 18px;
+}
+.login{
+  background-color: transparent !important;
+  border: none !important;
+  margin-right: 15px;
+}
+.join{
+  color: #559aec !important;
+  border-color: #559aec !important;
+  background-color: transparent !important;
+}
+.image{
+  background: url("/assets/gaming.ebaf2ffc84f4451d.jpg");
+  height: 90vh;
+  background-size: 100% 100%;
+}
+
+.formDiv{
+  background-color: #33383e;
+  padding: 30px;
+}
+input{
+  background-color: #1c1e22;
+  border-color: #1c1e22;
+  padding-left: 10px;
+  color: #fff !important;
+}
+.form-control{
+  margin-bottom: 15px !important;
+}
+.formDiv h2{
+  color: #aaaaaa;
+}
+
+button{
+  background-color: #3b3f44;
+  margin-top: 10px;
+  color: #fff;
+  border-color: #1c1e22;
+  padding: 10px;
+}
+
+p{
+  color: #6d757d;
+}
+.angleRight{
+  color: #559aec;
+}
+input:focus{
+  color: #fff !important;
+  background-color: #1c1e22 !important;
+
+}
+.errorReq{
+background-color: #fef3cc;
+border-radius: 5px;
+padding: 3px;
+padding-left: 7px;
+margin-top: -12px;
+}
+.angleRight{
+  cursor: pointer;
+}
+.loginImg{
+  width: 120px;
+  margin-bottom: 20px;
+}
